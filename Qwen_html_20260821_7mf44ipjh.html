@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DQH Al-Huda Sukoharjo — Darul Qur'an Wal Hadits | Pesantren Tahfidz & Hadits</title>
+<meta name="description" content="Pesantren Darul Qur'an Wal Hadits (DQH) Al-Huda Sukoharjo, Jawa Tengah. Pendidikan setingkat Aliyah/SMA dengan program Tahfidzul Qur'an, hafalan hadits, dan Bahasa Arab. PPDB Tahun Ajaran 1448/1449 - 2027/2028 telah dibuka.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#14919b;
+  --teal-dark:#0b6b74;
+  --teal-deep:#084c54;
+  --blue:#2274a5;
+  --orange:#f77f00;
+  --orange-soft:#ff9d33;
+  --ink:#0f3a40;
+  --muted:#587a80;
+  --bg:#f4fafa;
+  --card:#ffffff;
+  --line:#ddeeef;
+  --radius:18px;
+  --shadow:0 10px 30px rgba(8,76,84,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+img{max-width:100%}
+.container{width:min(1120px,92%);margin:0 auto}
+h1,h2,h3{line-height:1.25}
+
+/* ===== Topbar ===== */
+.topbar{background:var(--teal-deep);color:#dff3f4;font-size:.82rem;padding:.45rem 0}
+.topbar .container{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.topbar a{color:#ffd9ae;text-decoration:none;font-weight:600}
+
+/* ===== Header ===== */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--ink)}
+.brand svg{width:46px;height:46px;flex:none}
+.brand img{width:80px;height:80px;object-fit:contain;flex:none;border-radius:14px;background:#fff}
+.brand b{font-size:1.2rem;font-weight:800;letter-spacing:.2px;display:block;line-height:1.2}
+.brand small{display:block;color:var(--muted);font-size:.8rem;font-weight:600;letter-spacing:.6px;text-transform:uppercase}
+.menu{display:flex;gap:1.6rem;list-style:none;align-items:center}
+.menu a{text-decoration:none;color:var(--ink);font-weight:600;font-size:1.15rem;position:relative}
+.menu a:hover{color:var(--teal)}
+.menu a.cta{background:var(--orange);color:#fff;padding:.55rem 1.1rem;border-radius:999px;box-shadow:0 6px 16px rgba(247,127,0,.35)}
+.menu a.cta:hover{background:#e07400}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+.burger span{display:block;width:24px;height:3px;background:var(--teal-dark);margin:5px 0;border-radius:2px}
+
+/* ===== Hero ===== */
+.hero{position:relative;color:#fff;overflow:hidden;
+  background:linear-gradient(160deg,var(--teal-deep) 0%,var(--teal-dark) 45%,var(--teal) 100%)}
+.hero::before{content:"";position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'><g fill='none' stroke='%23ffffff' stroke-opacity='0.09'><path d='M36 8l7 14 14-7-7 14 14 7-14 7 7 14-14-7-7 14-7-14-14 7 7-14-14-7 14-7-7-14 14 7z'/><circle cx='36' cy='36' r='6'/></g></svg>")}
+.hero .container{position:relative;padding:5.5rem 0 6.5rem;text-align:center}
+.hero .arabic{font-family:'Amiri',serif;font-size:clamp(1.4rem,3.5vw,2.1rem);color:#ffd9ae;margin-bottom:.8rem}
+.hero h1{font-size:clamp(1.9rem,5vw,3.3rem);font-weight:800;letter-spacing:.5px}
+.hero h1 span{color:var(--orange-soft)}
+.hero .loc{margin-top:.5rem;font-weight:600;color:#cdeef0;letter-spacing:2px;text-transform:uppercase;font-size:.85rem}
+.hero .tagline{max-width:640px;margin:1.2rem auto 0;font-size:1.05rem;color:#eafafa}
+.ppdb-badge{display:inline-block;margin-top:1.6rem;background:var(--orange);color:#fff;font-weight:700;
+  padding:.7rem 1.4rem;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.25);font-size:.95rem}
+.ppdb-badge small{display:block;font-weight:600;font-size:.78rem;opacity:.95}
+.hero-btns{margin-top:1.8rem;display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:700;border-radius:999px;
+  padding:.85rem 1.7rem;font-size:.95rem;transition:.25s;border:2px solid transparent}
+.btn-orange{background:var(--orange);color:#fff;box-shadow:0 10px 24px rgba(247,127,0,.4)}
+.btn-orange:hover{transform:translateY(-2px);background:#e07400}
+.btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-teal{background:var(--teal);color:#fff;box-shadow:0 10px 24px rgba(20,145,155,.35)}
+.btn-teal:hover{transform:translateY(-2px);background:var(--teal-dark)}
+.hero-stats{margin-top:3rem;display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+.stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:.8rem 1.6rem;backdrop-filter:blur(4px)}
+.stat b{display:block;font-size:1.3rem;color:#ffd9ae}
+.stat span{font-size:.8rem;letter-spacing:1px;text-transform:uppercase;color:#d8f2f3}
+
+/* ===== Sections ===== */
+section{padding:5rem 0}
+.kicker{color:var(--orange);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:.78rem}
+.sec-title{font-size:clamp(1.5rem,3.4vw,2.2rem);font-weight:800;margin:.4rem 0 .6rem}
+.divider{display:flex;align-items:center;gap:.6rem;margin-bottom:2.2rem}
+.divider::before,.divider::after{content:"";height:2px;width:42px;border-radius:2px}
+.divider::before{background:var(--teal)}
+.divider::after{background:var(--orange)}
+.divider i{width:9px;height:9px;background:var(--orange);transform:rotate(45deg);border-radius:2px}
+.center{text-align:center}
+.center .divider{justify-content:center}
+.lead{color:var(--muted);max-width:760px}
+.center .lead{margin:0 auto}
+
+/* Cards keunggulan */
+.grid{display:grid;gap:1.2rem}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow);transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:var(--teal)}
+.card .ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin-bottom:1rem;font-size:1.5rem;
+  background:linear-gradient(135deg,rgba(20,145,155,.14),rgba(247,127,0,.14));color:var(--teal-dark)}
+.card h3{font-size:1.02rem;margin-bottom:.4rem}
+.card p{font-size:.9rem;color:var(--muted)}
+.num{font-weight:800;color:var(--orange);font-size:.8rem;letter-spacing:2px}
+
+/* Kurikulum chips */
+.chips{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center}
+.chip{background:#fff;border:1.5px solid var(--teal);color:var(--teal-dark);font-weight:700;font-size:.88rem;
+  padding:.5rem 1.1rem;border-radius:999px;transition:.2s}
+.chip:hover{background:var(--teal);color:#fff}
+
+/* Ekstra */
+.extra .ico{margin:0 auto 1rem}
+.extra{text-align:center}
+
+/* Profil */
+.profil-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:start}
+.profil-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow)}
+.profil-box h3{color:var(--teal-dark);margin-bottom:.7rem}
+.profil-box ul{list-style:none;margin-top:.6rem}
+.profil-box li{padding:.55rem 0 .55rem 1.8rem;position:relative;border-bottom:1px dashed var(--line);font-size:.94rem}
+.profil-box li:last-child{border:0}
+.profil-box li::before{content:"✦";position:absolute;left:.2rem;color:var(--orange)}
+
+/* PPDB */
+#ppdb{background:linear-gradient(180deg,#eafaf9, #f4fafa)}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin:2.4rem 0}
+.t-card{background:#fff;border-radius:var(--radius);border-top:5px solid var(--teal);padding:1.6rem;box-shadow:var(--shadow);position:relative}
+.t-card.orange{border-top-color:var(--orange)}
+.t-card .step{position:absolute;top:-16px;left:1.4rem;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  background:var(--teal);color:#fff;font-weight:800}
+.t-card.orange .step{background:var(--orange)}
+.t-card h3{margin:.4rem 0 .3rem;font-size:1.05rem}
+.t-card .date{font-weight:800;color:var(--teal-dark);font-size:1.05rem}
+.t-card p{font-size:.88rem;color:var(--muted);margin-top:.3rem}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:2rem}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.8rem;box-shadow:var(--shadow)}
+.panel h3{color:var(--teal-dark);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.panel h3 span{font-size:1.2rem}
+.panel ul{list-style:none}
+.panel li{padding:.5rem 0 .5rem 1.7rem;position:relative;font-size:.94rem;border-bottom:1px dashed var(--line)}
+.panel li:last-child{border:0}
+.panel li::before{content:"✔";position:absolute;left:0;color:var(--teal);font-weight:800}
+
+/* Tabel biaya */
+.table-wrap{overflow-x:auto;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line);background:#fff}
+table{width:100%;border-collapse:collapse;min-width:640px}
+thead th{background:var(--teal-dark);color:#fff;padding:.9rem 1.1rem;text-align:left;font-size:.9rem;letter-spacing:.5px}
+tbody td{padding:.85rem 1.1rem;border-bottom:1px solid var(--line);font-size:.92rem}
+tbody tr:nth-child(even){background:#f2fbfb}
+tbody tr:last-child td{border-bottom:0}
+td b{color:var(--teal-dark)}
+.note{font-size:.85rem;color:var(--muted);margin-top:.8rem}
+
+/* Diskon */
+.diskon{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+.d-card{border-radius:var(--radius);padding:1.6rem;color:#fff;background:linear-gradient(140deg,var(--teal),var(--teal-dark));box-shadow:var(--shadow)}
+.d-card.o{background:linear-gradient(140deg,var(--orange-soft),var(--orange))}
+.d-card b{font-size:1.05rem;display:block;margin-bottom:.4rem}
+.d-card p{font-size:.88rem;opacity:.95}
+
+/* Kontak */
+.kontak-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}
+.map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);min-height:320px}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+.k-item{display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;border-bottom:1px dashed var(--line)}
+.k-item:last-child{border:0}
+.k-item .ico{width:46px;height:46px;flex:none;border-radius:12px;display:grid;place-items:center;background:rgba(20,145,155,.12);color:var(--teal-dark);font-size:1.2rem}
+.k-item b{display:block}
+.k-item p,.k-item a{font-size:.92rem;color:var(--muted);text-decoration:none}
+.k-item a:hover{color:var(--teal)}
+
+/* Footer */
+footer{background:var(--teal-deep);color:#cfe9ea;padding:3.5rem 0 0}
+.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.5rem}
+footer h4{color:#fff;margin-bottom:1rem;font-size:1rem}
+footer a{color:#ffd9ae;text-decoration:none}
+footer a:hover{color:#fff}
+footer ul{list-style:none}
+footer li{margin-bottom:.5rem;font-size:.9rem}
+.f-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:2.5rem;padding:1.1rem 0;text-align:center;font-size:.82rem;color:#9cc9cc}
+
+/* WA float */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:99;display:flex;align-items:center;gap:.6rem;
+  background:#25d366;color:#fff;text-decoration:none;font-weight:700;padding:.8rem 1.2rem;border-radius:999px;
+  box-shadow:0 12px 28px rgba(0,0,0,.25);transition:.25s}
+.wa-float:hover{transform:translateY(-3px)}
+.wa-float svg{width:26px;height:26px;fill:#fff}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:.7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* Responsive */
+@media(max-width:960px){
+  .grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}
+  .timeline,.diskon{grid-template-columns:1fr}
+  .profil-wrap,.two-col,.kontak-grid,.f-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .menu{position:fixed;inset:0;top:0;background:#fff;flex-direction:column;justify-content:center;gap:1.6rem;
+    transform:translateX(100%);transition:.35s;box-shadow:var(--shadow)}
+  .menu.open{transform:none}
+  .menu a{font-size:1.1rem}
+  .burger{display:block;z-index:101}
+  .grid-3,.grid-4{grid-template-columns:1fr}
+  .topbar .container{justify-content:center;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="container">
+    <span>🕌 Desa Karanganyar, Kec. Weru, Kab. Sukoharjo, Jawa Tengah</span>
+    <span>📞 <a href="https://wa.me/6288215602211">0882-1560-2211 (TU Al Huda)</a></span>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="container nav">
+    <a class="brand" href="#beranda">
+            <img src="logo.png.png" alt="Logo DQH Al-Huda">
+      <span><b>DQH AL-HUDA</b><small>Darul Qur'an Wal Hadits</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Buka menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#profil">Profil</a></li>
+      <li><a href="#program">Program</a></li>
+      <li><a href="#ppdb">PPDB</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+      <li><a class="cta" href="https://wa.me/6288215602211?text=Assalamu'alaikum,%20saya%20ingin%20informasi%20PPDB%20DQH%20Al-Huda" target="_blank" rel="noopener">Daftar Sekarang</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="beranda" style="padding:0">
+  <div class="container">
+    <div class="arabic">دار القرآن والحديث</div>
+    <h1>DARUL QUR'AN WAL HADITS <span>AL-HUDA</span></h1>
+    <div class="loc">Sukoharjo • Jawa Tengah</div>
+    <p class="tagline">Membentuk da'i umat bermodalkan Al-Qur'an dan Hadits, dengan pribadi beriman dan beradab sesuai petunjuk salaf.</p>
+    <div class="ppdb-badge">
+       PENERIMAAN PESERTA DIDIK BARU — TAHUN AJARAN 1448/1449 – 2027/2028
+      <small>Kuota 15 Putra &amp; 15 Putri • Setingkat Aliyah/SMA</small>
+    </div>
+    <div class="hero-btns">
+      <a class="btn btn-orange" href="https://wa.me/6288215602211?text=Assalamu'alaikum,%20saya%20ingin%20mendaftarkan%20putra/putri%20saya%20ke%20DQH%20Al-Huda" target="_blank" rel="noopener">Daftar Sekarang</a>
+      <a class="btn btn-ghost" href="#ppdb">Info PPDB</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b>15</b><span>Kuota Putra</span></div>
+      <div class="stat"><b>15</b><span>Kuota Putri</span></div>
+      <div class="stat"><b>Aliyah/SMA</b><span>Setingkat</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Keunggulan -->
+<section id="program">
+  <div class="container">
+    <div class="center reveal">
+      <div class="kicker">Program Pendidikan</div>
+      <h2 class="sec-title">Keunggulan Pendidikan</h2>
+      <div class="divider"><i></i></div>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal"><div class="ico">📖</div><span class="num">01</span><h3>Tahfidzul Qur'an</h3><p>Memprioritaskan kualitas hafalan Al-Qur'an, bukan sekedar mengejar kuantitas.</p></div>
+      <div class="card reveal"><div class="ico">🕌</div><span class="num">02</span><h3>Hafalan Hadits</h3><p>Hafal matan-matan hadits dan cabang-cabang ilmu syar'i lainnya.</p></div>
+      <div class="card reveal"><div class="ico">🤲</div><span class="num">03</span><h3>Iman &amp; Adab</h3><p>Membentuk pribadi beriman dan beradab sesuai petunjuk salaf.</p></div>
+      <div class="card reveal"><div class="ico">🗣️</div><span class="num">04</span><h3>Bahasa Arab</h3><p>Membimbing santri agar menguasai Bahasa Arab dengan baik.</p></div>
+      <div class="card reveal"><div class="ico">📣</div><span class="num">05</span><h3>Kader Da'i</h3><p>Membentuk da'i umat bermodalkan Al-Qur'an dan Hadits; terjun dakwah ke masyarakat untuk membangun mental dan skill berdakwah.</p></div>
+      <div class="card reveal"><div class="ico">🌱</div><span class="num">06</span><h3>Tauhid &amp; Amal</h3><p>Penanaman tauhid secara teori dan praktik, serta praktek ilmu bersosial/bermasyarakat sesuai tuntunan syari'at.</p></div>
+    </div>
+
+    <!-- Kurikulum -->
+    <div class="center reveal" style="margin-top:4rem">
+      <div class="kicker">Kurikulum</div>
+      <h2 class="sec-title">Kurikulum Pendidikan</h2>
+      <div class="divider"><i></i></div>
+      <div class="chips">
+        <span class="chip">Tauhid</span><span class="chip">Fikih Ibadah &amp; Muamalah</span><span class="chip">Bahasa Arab</span>
+        <span class="chip">Nahwu</span><span class="chip">Shorof</span><span class="chip">Tarjamah</span>
+        <span class="chip">Fikih Siroh</span><span class="chip">Adab</span><span class="chip">Tsaqofah Islamiyah</span>
+        <span class="chip">Tajwid &amp; Tahsin</span><span class="chip">Ilmu Waris</span><span class="chip">Ekstrakurikuler</span><span class="chip">Lifeskill</span>
+      </div>
+    </div>
+
+    <!-- Ekstrakurikuler -->
+    <div class="center reveal" style="margin-top:4rem">
+      <div class="kicker">Penunjang</div>
+      <h2 class="sec-title">Ekstrakurikuler &amp; Lifeskill</h2>
+      <div class="divider"><i></i></div>
+    </div>
+    <div class="grid grid-4">
+      <div class="card extra reveal"><div class="ico">🏹</div><h3>Memanah</h3></div>
+      <div class="card extra reveal"><div class="ico">🏊</div><h3>Berenang</h3></div>
+      <div class="card extra reveal"><div class="ico">⚽</div><h3>Futsal</h3></div>
+      <div class="card extra reveal"><div class="ico">🥋</div><h3>Beladiri</h3></div>
+      <div class="card extra reveal"><div class="ico">🍳</div><h3>Tata Boga</h3></div>
+      <div class="card extra reveal"><div class="ico">💪</div><h3>Kemandirian</h3></div>
+      <div class="card extra reveal"><div class="ico">🥾</div><h3>Long March</h3></div>
+      <div class="card extra reveal"><div class="ico">🏕️</div><h3>Rihlah</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- Profil -->
+<section id="profil" style="background:#fff">
+  <div class="container">
+    <div class="reveal">
+      <div class="kicker">Tentang Kami</div>
+      <h2 class="sec-title">Profil Pesantren</h2>
+      <div class="divider"><i></i></div>
+    </div>
+    <div class="profil-wrap">
+      <div class="profil-box reveal">
+        <h3>Darul Qur'an Wal Hadits Al-Huda</h3>
+        <p style="color:var(--muted);font-size:.95rem">Pesantren <b>Darul Qur'an Wal Hadits (DQH) Al-Huda</b> adalah lembaga pendidikan Islam setingkat Aliyah/SMA yang berlokasi di Sukoharjo, Jawa Tengah. Pesantren berfokus pada <b>Tahfidzul Qur'an</b> dan <b>hafalan hadits</b> serta cabang-cabang ilmu syar'i lainnya, dengan tujuan membentuk pribadi yang beriman, beradab sesuai petunjuk salaf, dan menguasai Bahasa Arab dengan baik — hingga melahirkan da'i umat yang bermodalkan Al-Qur'an dan Hadits.</p>
+        <h3 style="margin-top:1.6rem">Pengelola &amp; Pengajar</h3>
+        <ul>
+          <li>Lulusan S1 &amp; S2 universitas dalam negeri dan Timur Tengah.</li>
+          <li>Lulusan pesantren dan Ma'had Aly dalam negeri.</li>
+        </ul>
+      </div>
+      <div class="profil-box reveal" style="background:linear-gradient(150deg,var(--teal-deep),var(--teal-dark));color:#eafafa;border:0">
+        <h3 style="color:#ffd9ae">Visi Pendidikan</h3>
+        <p style="font-size:.95rem">"Membentuk da'i umat bermodalkan Al-Qur'an dan Hadits."</p>
+        <ul style="margin-top:1rem">
+          <li style="border-color:rgba(255,255,255,.2)">Kualitas hafalan diutamakan, bukan sekedar kuantitas.</li>
+          <li style="border-color:rgba(255,255,255,.2)">Penanaman tauhid secara teori dan praktik.</li>
+          <li style="border-color:rgba(255,255,255,.2)">Terjun dakwah ke masyarakat untuk membangun mental dan skill berdakwah.</li>
+          <li style="border-color:rgba(255,255,255,.2)">Praktek bermasyarakat sesuai tuntunan syari'at.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PPDB -->
+<section id="ppdb">
+  <div class="container">
+    <div class="center reveal">
+      <div class="kicker">Pendaftaran</div>
+      <h2 class="sec-title">PPDB Tahun Ajaran 1448/1449 – 2027/2028</h2>
+      <div class="divider"><i></i></div>
+      <p class="lead">Kuota <b>15 Putra</b> dan <b>15 Putri</b> • Setingkat Aliyah/SMA</p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline">
+      <div class="t-card reveal"><div class="step">1</div><h3>Gelombang 1</h3><div class="date">15 September – 25 Desember 2026</div><p>Pendaftaran gelombang pertama.</p></div>
+      <div class="t-card orange reveal"><div class="step">2</div><h3>Tes Seleksi &amp; Wawancara</h3><div class="date">27 Desember 2026</div><p><i>One day service</i> — selesai dalam satu hari.</p></div>
+      <div class="t-card reveal"><div class="step">3</div><h3>Gelombang 2</h3><div class="date">1 Januari – 31 Mei 2027</div><p>Jika kuota belum terpenuhi.</p></div>
+    </div>
+
+    <div class="two-col">
+      <div class="panel reveal">
+        <h3><span>📋</span> Syarat &amp; Ketentuan</h3>
+        <ul>
+          <li>Usia minimal 15 tahun.</li>
+          <li>Mampu membaca Al-Qur'an.</li>
+          <li>Legalisir ijazah terakhir.</li>
+          <li>Fotocopy raport kelas 3 (SMP/MTs).</li>
+          <li>Fotocopy KK &amp; KTP Orang Tua/Wali.</li>
+          <li>Membayar biaya pendaftaran <b>Rp 250.000,-</b></li>
+        </ul>
+      </div>
+      <div class="panel reveal">
+        <h3><span>🧾</span> Cara Pendaftaran</h3>
+        <ul>
+          <li><b>Online:</b> melalui WhatsApp <b>0882-1560-2211</b> (TU Al Huda).</li>
+          <li><b>Offline:</b> datang langsung ke lokasi pesantren — Desa Karanganyar, RT 02 RW 06, Kel. Karanganyar, Kec. Weru, Kab. Sukoharjo, Jawa Tengah, 57562.</li>
+        </ul>
+        <div style="margin-top:1.2rem">
+          <a class="btn btn-teal" href="https://wa.me/6288215602211?text=Assalamu'alaikum,%20saya%20ingin%20mendaftarkan%20putra/putri%20saya%20ke%20DQH%20Al-Huda" target="_blank" rel="noopener">Daftar via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Biaya -->
+    <div class="center reveal" style="margin-top:3.5rem">
+      <h2 class="sec-title" style="font-size:1.5rem">Biaya Pendidikan</h2>
+      <div class="divider"><i></i></div>
+    </div>
+    <div class="table-wrap reveal">
+      <table>
+        <thead><tr><th>Jenis Biaya</th><th>Nominal</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td><b>SPP</b> (tiga pilihan)</td><td>Rp 800.000 / Rp 900.000 / Rp 1.000.000</td><td>Per bulan</td></tr>
+          <tr><td><b>Infak Pengembangan</b></td><td>Rp 3.500.000 / Rp 4.000.000 / Rp 4.500.000</td><td>Dibayar sekali selama jadi santri</td></tr>
+          <tr><td>Buku Pelajaran</td><td>Rp 280.000</td><td>1 tahun</td></tr>
+          <tr><td>Infaq Kesehatan</td><td>Rp 150.000</td><td>1 tahun</td></tr>
+          <tr><td>FC + Ujian</td><td>Rp 300.000</td><td>1 tahun</td></tr>
+          <tr><td>Ekstrakurikuler &amp; Lifeskill</td><td>Rp 850.000</td><td>1 tahun</td></tr>
+          <tr><td>Seragam</td><td>Putra Rp 300.000 • Putri Rp 350.000</td><td>Sesuai jenis santri</td></tr>
+          <tr><td>Biaya Pendaftaran</td><td>Rp 250.000</td><td>Saat mendaftar</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Diskon -->
+    <div class="diskon">
+      <div class="d-card o reveal"><b>🎓 Diskon 50%</b><p>Diskon pengembangan 50% bagi lulusan DQH 'Amma yang mendaftar sebelum 30 Oktober 2026.</p></div>
+      <div class="d-card reveal"><b>⏰ Diskon Rp 500.000</b><p>Diskon pengembangan bagi pendaftar sebelum 30 Oktober 2026.</p></div>
+      <div class="d-card reveal"><b>💚 Subsidi Yatim &amp; Dhu'afa</b><p>Subsidi biaya pendidikan bagi yatim dan dhu'afa.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Kontak -->
+<section id="kontak" style="background:#fff">
+  <div class="container">
+    <div class="reveal">
+      <div class="kicker">Hubungi Kami</div>
+      <h2 class="sec-title">Kontak &amp; Lokasi</h2>
+      <div class="divider"><i></i></div>
+    </div>
+    <div class="kontak-grid">
+      <div class="panel reveal">
+        <div class="k-item"><div class="ico">📍</div><div><b>Alamat Pesantren</b><p>Desa Karanganyar, RT 02 RW 06, Kel. Karanganyar, Kec. Weru, Kab. Sukoharjo, Jawa Tengah, 57562</p></div></div>
+        <div class="k-item"><div class="ico">💬</div><div><b>WhatsApp / Telepon</b><a href="https://wa.me/6288215602211">0882-1560-2211 (TU Al Huda)</a></div></div>
+        <div class="k-item"><div class="ico">🕰️</div><div><b>Layanan Pendaftaran</b><p>Gelombang 1: 15 September – 25 Desember 2026<br>Gelombang 2: 1 Januari – 31 Mei 2027</p></div></div>
+        <div style="margin-top:1.2rem">
+          <a class="btn btn-orange" href="https://wa.me/6288215602211?text=Assalamu'alaikum,%20saya%20ingin%20bertanya%20tentang%20DQH%20Al-Huda" target="_blank" rel="noopener">Chat Admin</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Peta Lokasi DQH Al-Huda" src="https://www.google.com/maps?q=Karanganyar,+Weru,+Sukoharjo,+Jawa+Tengah&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container f-grid">
+    <div>
+      <h4>DQH AL-HUDA</h4>
+      <p style="font-size:.9rem">Darul Qur'an Wal Hadits Al-Huda — pesantren Tahfidzul Qur'an &amp; Hadits setingkat Aliyah/SMA di Sukoharjo, Jawa Tengah. Membentuk da'i umat bermodalkan Al-Qur'an dan Hadits.</p>
+    </div>
+    <div>
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#program">Program</a></li>
+        <li><a href="#ppdb">PPDB</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontak</h4>
+      <ul>
+        <li>Desa Karanganyar, RT 02 RW 06, Kec. Weru, Kab. Sukoharjo, Jawa Tengah, 57562</li>
+        <li><a href="https://wa.me/6288215602211">0882-1560-2211 (TU Al Huda)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bottom">© 2026 Darul Qur'an Wal Hadits Al-Huda — Sukoharjo, Jawa Tengah</div>
+</footer>
+
+<!-- WhatsApp floating -->
+<a class="wa-float" href="https://wa.me/6288215602211?text=Assalamu'alaikum,%20saya%20ingin%20informasi%20PPDB%20DQH%20Al-Huda" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+  <span>Chat TU</span>
+</a>
+
+<script>
+// Menu mobile
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>menu.classList.toggle('open'));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+// Animasi muncul saat scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
