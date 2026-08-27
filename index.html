@@ -204,6 +204,12 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
   .wa-float span{display:none}
   .wa-float{padding:.95rem}
 }
+/* Formulir PPDB */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+form label{display:block;font-size:.85rem;font-weight:700;color:var(--teal-dark);margin-top:.8rem}
+form input,form select{width:100%;margin-top:.35rem;padding:.7rem .9rem;border:1.5px solid var(--line);border-radius:12px;font:inherit;font-size:.92rem;background:#fff}
+form input:focus,form select:focus{outline:2px solid var(--teal);border-color:var(--teal)}
+@media(max-width:640px){.form-grid{grid-template-columns:1fr}}  
 </style>
 </head>
 <body>
@@ -422,9 +428,27 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
           <li><b>Offline:</b> datang langsung ke lokasi pesantren — Desa Karanganyar, RT 02 RW 06, Kel. Karanganyar, Kec. Weru, Kab. Sukoharjo, Jawa Tengah, 57562.</li>
         </ul>
         <div style="margin-top:1.2rem">
-          <a class="btn btn-teal" href="https://wa.me/6288215602211?text=Assalamu'alaikum,%20saya%20ingin%20mendaftarkan%20putra/putri%20saya%20ke%20DQH%20Al-Huda" target="_blank" rel="noopener">Daftar via WhatsApp</a>
+          <a class="btn btn-teal" href="https://wa.me/6288215602211?text=Assalamu'alaikum,%20ana%20hendak%20mendaftarkan%20anak%20saya%20ke%20DQH%20Al-Huda" target="_blank" rel="noopener">Daftar via WhatsApp</a>
         </div>
       </div>
+    </div>
+        <div class="panel reveal" style="margin-top:2rem">
+      <h3><span>📝</span> Formulir Pendaftaran Online</h3>
+      <p style="font-size:.9rem;color:var(--muted);margin-bottom:.5rem">Isi data di bawah ini, lalu klik <b>Kirim via WhatsApp</b> — data otomatis terkirim ke TU Al Huda.</p>
+      <form id="formPPDB">
+        <div class="form-grid">
+          <label>Nama Lengkap Calon Santri<input required name="nama" placeholder="Contoh: Ahmad Fulan"></label>
+          <label>Jenis Kelamin<select name="jk"><option>Putra</option><option>Putri</option></select></label>
+          <label>Tempat, Tanggal Lahir<input required name="ttl" placeholder="Contoh: Sukoharjo, 12 Mei 2010"></label>
+          <label>Usia<input required name="usia" type="number" min="12" placeholder="Contoh: 15"></label>
+          <label>Asal Sekolah (SMP/MTs)<input required name="sekolah" placeholder="Contoh: MTs ..."></label>
+          <label>Nama Orang Tua/Wali<input required name="ortu" placeholder="Nama ayah/wali"></label>
+          <label>No. HP Wali<input required name="hp" placeholder="Contoh: 0812..."></label>
+          <label>Gelombang<select name="gel"><option>Gelombang 1</option><option>Gelombang 2</option></select></label>
+        </div>
+        <label>Alamat Lengkap<input name="alamat" placeholder="Desa, kecamatan, kabupaten"></label>
+        <button class="btn btn-orange" type="submit" style="margin-top:1.2rem">Kirim via WhatsApp</button>
+      </form>
     </div>
     <div class="center reveal" style="margin-top:3.5rem">
       <h2 class="sec-title" style="font-size:1.5rem">Biaya Pendidikan</h2>
