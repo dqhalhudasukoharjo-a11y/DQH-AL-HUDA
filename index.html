@@ -10,111 +10,108 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --teal:#14919b;
-  --teal-dark:#0b6b74;
-  --teal-deep:#084c54;
-  --blue:#2274a5;
-  --orange:#f77f00;
-  --orange-soft:#ff9d33;
-  --ink:#0f3a40;
-  --muted:#587a80;
-  --bg:#f4fafa;
-  --card:#ffffff;
-  --line:#ddeeef;
-  --radius:18px;
-  --shadow:0 10px 30px rgba(8,76,84,.08);
+  --teal:#14919b; --teal-dark:#0b6b74; --teal-deep:#084c54; --blue:#2274a5;
+  --orange:#f77f00; --orange-soft:#ff9d33;
+  --ink:#0f3a40; --muted:#587a80; --bg:#f4fafa; --card:#fff; --line:#ddeeef;
+  --radius:18px; --shadow:0 10px 30px rgba(8,76,84,.08);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);line-height:1.7;
+  background-color:var(--bg);
+  background-image:url('bg-santri.jpg');
+  background-size:cover;background-position:center top;background-repeat:no-repeat;
+  background-attachment:scroll}
+@media(min-width:761px){body{background-attachment:fixed}}
+body::before{content:"";position:fixed;inset:0;background:rgba(244,250,250,.85);z-index:-1;pointer-events:none}
 img{max-width:100%}
 .container{width:min(1120px,92%);margin:0 auto}
 h1,h2,h3{line-height:1.25}
+section{padding:5rem 0;scroll-margin-top:90px}
 
-/* ===== Topbar ===== */
+/* Topbar */
 .topbar{background:var(--teal-deep);color:#dff3f4;font-size:.82rem;padding:.45rem 0}
 .topbar .container{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .topbar a{color:#ffd9ae;text-decoration:none;font-weight:600}
 
-/* ===== Header ===== */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
 .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--ink)}
-.brand svg{width:46px;height:46px;flex:none}
-.brand img{width:80px;height:80px;object-fit:contain;flex:none;border-radius:14px;background:#fff}
-.brand b{font-size:1.2rem;font-weight:800;letter-spacing:.2px;display:block;line-height:1.2}
-.brand small{display:block;color:var(--muted);font-size:.8rem;font-weight:600;letter-spacing:.6px;text-transform:uppercase}
-.menu{display:flex;gap:1.6rem;list-style:none;align-items:center}
-.menu a{text-decoration:none;color:var(--ink);font-weight:600;font-size:1.15rem;position:relative}
+.brand img{width:68px;height:68px;object-fit:contain;flex:none;border-radius:14px;background:#fff}
+.brand b{font-size:1.15rem;font-weight:800;letter-spacing:.2px;display:block;line-height:1.2}
+.brand small{display:block;color:var(--muted);font-size:.78rem;font-weight:600;letter-spacing:.6px;text-transform:uppercase}
+.menu{display:flex;gap:1.8rem;list-style:none;align-items:center}
+.menu a{text-decoration:none;color:var(--ink);font-weight:600;font-size:1.05rem}
 .menu a:hover{color:var(--teal)}
 .menu a.cta{background:var(--orange);color:#fff;padding:.55rem 1.1rem;border-radius:999px;box-shadow:0 6px 16px rgba(247,127,0,.35)}
-.menu a.cta:hover{background:#e07400}
-.burger{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:.4rem;z-index:101}
 .burger span{display:block;width:24px;height:3px;background:var(--teal-dark);margin:5px 0;border-radius:2px}
 
-/* ===== Hero ===== */
-.hero{position:relative;color:#fff;overflow:hidden;
-  background:linear-gradient(160deg,var(--teal-deep) 0%,var(--teal-dark) 45%,var(--teal) 100%)}
-.hero::before{content:"";position:absolute;inset:0;
-  background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'><g fill='none' stroke='%23ffffff' stroke-opacity='0.09'><path d='M36 8l7 14 14-7-7 14 14 7-14 7 7 14-14-7-7 14-7-14-14 7 7-14-14-7 14-7-7-14 14 7z'/><circle cx='36' cy='36' r='6'/></g></svg>")}
-.hero .container{position:relative;padding:5.5rem 0 6.5rem;text-align:center}
+/* Hero */
+.hero{position:relative;color:#fff;overflow:hidden;background:linear-gradient(160deg,var(--teal-deep) 0%,var(--teal-dark) 45%,var(--teal) 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'><g fill='none' stroke='%23ffffff' stroke-opacity='0.09'><path d='M36 8l7 14 14-7-7 14 14 7-14 7 7 14-14-7-7 14-7-14-14 7 7-14-14-7 14-7-7-14 14 7z'/><circle cx='36' cy='36' r='6'/></g></svg>")}
+.hero .container{position:relative;padding:5rem 0 6rem;text-align:center}
 .hero .arabic{font-family:'Amiri',serif;font-size:clamp(1.4rem,3.5vw,2.1rem);color:#ffd9ae;margin-bottom:.8rem}
-.hero h1{font-size:clamp(1.9rem,5vw,3.3rem);font-weight:800;letter-spacing:.5px}
+.hero h1{font-size:clamp(1.7rem,5vw,3.2rem);font-weight:800;letter-spacing:.5px}
 .hero h1 span{color:var(--orange-soft)}
 .hero .loc{margin-top:.5rem;font-weight:600;color:#cdeef0;letter-spacing:2px;text-transform:uppercase;font-size:.85rem}
-.hero .tagline{max-width:640px;margin:1.2rem auto 0;font-size:1.05rem;color:#eafafa}
-.ppdb-badge{display:inline-block;margin-top:1.6rem;background:var(--orange);color:#fff;font-weight:700;
-  padding:.7rem 1.4rem;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.25);font-size:.95rem}
+.hero .tagline{max-width:640px;margin:1.2rem auto 0;font-size:1.02rem;color:#eafafa}
+.ppdb-badge{display:inline-block;margin-top:1.5rem;background:var(--orange);color:#fff;font-weight:700;padding:.7rem 1.4rem;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.25);font-size:.95rem}
 .ppdb-badge small{display:block;font-weight:600;font-size:.78rem;opacity:.95}
-.hero-btns{margin-top:1.8rem;display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:700;border-radius:999px;
-  padding:.85rem 1.7rem;font-size:.95rem;transition:.25s;border:2px solid transparent}
+.hero-btns{margin-top:1.7rem;display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:700;border-radius:999px;padding:.85rem 1.7rem;font-size:.95rem;transition:.25s;border:2px solid transparent}
 .btn-orange{background:var(--orange);color:#fff;box-shadow:0 10px 24px rgba(247,127,0,.4)}
 .btn-orange:hover{transform:translateY(-2px);background:#e07400}
 .btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
 .btn-ghost:hover{background:rgba(255,255,255,.12)}
 .btn-teal{background:var(--teal);color:#fff;box-shadow:0 10px 24px rgba(20,145,155,.35)}
 .btn-teal:hover{transform:translateY(-2px);background:var(--teal-dark)}
-.hero-stats{margin-top:3rem;display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+.hero-stats{margin-top:2.6rem;display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
 .stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:.8rem 1.6rem;backdrop-filter:blur(4px)}
 .stat b{display:block;font-size:1.3rem;color:#ffd9ae}
 .stat span{font-size:.8rem;letter-spacing:1px;text-transform:uppercase;color:#d8f2f3}
 
-/* ===== Sections ===== */
-section{padding:5rem 0}
+/* Sections */
 .kicker{color:var(--orange);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:.78rem}
 .sec-title{font-size:clamp(1.5rem,3.4vw,2.2rem);font-weight:800;margin:.4rem 0 .6rem}
 .divider{display:flex;align-items:center;gap:.6rem;margin-bottom:2.2rem}
 .divider::before,.divider::after{content:"";height:2px;width:42px;border-radius:2px}
-.divider::before{background:var(--teal)}
-.divider::after{background:var(--orange)}
+.divider::before{background:var(--teal)} .divider::after{background:var(--orange)}
 .divider i{width:9px;height:9px;background:var(--orange);transform:rotate(45deg);border-radius:2px}
 .center{text-align:center}
 .center .divider{justify-content:center}
 .lead{color:var(--muted);max-width:760px}
 .center .lead{margin:0 auto}
 
-/* Cards keunggulan */
+/* Grids & cards */
 .grid{display:grid;gap:1.2rem}
 .grid-3{grid-template-columns:repeat(3,1fr)}
 .grid-4{grid-template-columns:repeat(4,1fr)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow);transition:.25s}
 .card:hover{transform:translateY(-5px);border-color:var(--teal)}
-.card .ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin-bottom:1rem;font-size:1.5rem;
-  background:linear-gradient(135deg,rgba(20,145,155,.14),rgba(247,127,0,.14));color:var(--teal-dark)}
+.card .ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin-bottom:1rem;font-size:1.5rem;background:linear-gradient(135deg,rgba(20,145,155,.14),rgba(247,127,0,.14));color:var(--teal-dark)}
 .card h3{font-size:1.02rem;margin-bottom:.4rem}
 .card p{font-size:.9rem;color:var(--muted)}
 .num{font-weight:800;color:var(--orange);font-size:.8rem;letter-spacing:2px}
-
-/* Kurikulum chips */
-.chips{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center}
-.chip{background:#fff;border:1.5px solid var(--teal);color:var(--teal-dark);font-weight:700;font-size:.88rem;
-  padding:.5rem 1.1rem;border-radius:999px;transition:.2s}
-.chip:hover{background:var(--teal);color:#fff}
-
-/* Ekstra */
+.clickable{cursor:pointer}
+.hint{display:block;margin-top:.5rem;font-size:.75rem;color:var(--orange);font-weight:800}
 .extra .ico{margin:0 auto 1rem}
 .extra{text-align:center}
+
+/* Chips */
+.chips{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center}
+.chip{background:#fff;border:1.5px solid var(--teal);color:var(--teal-dark);font-weight:700;font-size:.88rem;padding:.5rem 1.1rem;border-radius:999px}
+.chip-f{background:#fff;border:1.5px solid var(--teal);color:var(--teal-dark);font-weight:700;font-size:.85rem;padding:.5rem 1.1rem;border-radius:999px;cursor:pointer;transition:.2s}
+.chip-f:hover{background:rgba(20,145,155,.1)}
+.chip-f.active{background:var(--orange);border-color:var(--orange);color:#fff}
+
+/* Galeri */
+.g-item{margin:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#fff;border:1px solid var(--line)}
+.g-item img{width:100%;height:260px;object-fit:cover;display:block;transition:.4s}
+.g-item:hover img{transform:scale(1.06)}
+.g-item figcaption{padding:.8rem 1rem;font-size:.88rem;font-weight:700;color:var(--teal-dark)}
+.g-empty{text-align:center;color:var(--muted);padding:2rem 0;font-size:.95rem}
 
 /* Profil */
 .profil-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:start}
@@ -126,37 +123,29 @@ section{padding:5rem 0}
 .profil-box li::before{content:"✦";position:absolute;left:.2rem;color:var(--orange)}
 
 /* PPDB */
-#ppdb{background:linear-gradient(180deg,#eafaf9, #f4fafa)}
+#ppdb{background:linear-gradient(180deg,rgba(234,250,249,.92),rgba(244,250,250,.92))}
 .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin:2.4rem 0}
 .t-card{background:#fff;border-radius:var(--radius);border-top:5px solid var(--teal);padding:1.6rem;box-shadow:var(--shadow);position:relative}
 .t-card.orange{border-top-color:var(--orange)}
-.t-card .step{position:absolute;top:-16px;left:1.4rem;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
-  background:var(--teal);color:#fff;font-weight:800}
+.t-card .step{position:absolute;top:-16px;left:1.4rem;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--teal);color:#fff;font-weight:800}
 .t-card.orange .step{background:var(--orange)}
 .t-card h3{margin:.4rem 0 .3rem;font-size:1.05rem}
 .t-card .date{font-weight:800;color:var(--teal-dark);font-size:1.05rem}
 .t-card p{font-size:.88rem;color:var(--muted);margin-top:.3rem}
-
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:2rem}
 .panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.8rem;box-shadow:var(--shadow)}
 .panel h3{color:var(--teal-dark);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
-.panel h3 span{font-size:1.2rem}
 .panel ul{list-style:none}
 .panel li{padding:.5rem 0 .5rem 1.7rem;position:relative;font-size:.94rem;border-bottom:1px dashed var(--line)}
 .panel li:last-child{border:0}
 .panel li::before{content:"✔";position:absolute;left:0;color:var(--teal);font-weight:800}
-
-/* Tabel biaya */
 .table-wrap{overflow-x:auto;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line);background:#fff}
 table{width:100%;border-collapse:collapse;min-width:640px}
-thead th{background:var(--teal-dark);color:#fff;padding:.9rem 1.1rem;text-align:left;font-size:.9rem;letter-spacing:.5px}
+thead th{background:var(--teal-dark);color:#fff;padding:.9rem 1.1rem;text-align:left;font-size:.9rem}
 tbody td{padding:.85rem 1.1rem;border-bottom:1px solid var(--line);font-size:.92rem}
 tbody tr:nth-child(even){background:#f2fbfb}
 tbody tr:last-child td{border-bottom:0}
 td b{color:var(--teal-dark)}
-.note{font-size:.85rem;color:var(--muted);margin-top:.8rem}
-
-/* Diskon */
 .diskon{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
 .d-card{border-radius:var(--radius);padding:1.6rem;color:#fff;background:linear-gradient(140deg,var(--teal),var(--teal-dark));box-shadow:var(--shadow)}
 .d-card.o{background:linear-gradient(140deg,var(--orange-soft),var(--orange))}
@@ -165,29 +154,25 @@ td b{color:var(--teal-dark)}
 
 /* Kontak */
 .kontak-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}
-.map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);min-height:320px}
+.map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
 .map iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
 .k-item{display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;border-bottom:1px dashed var(--line)}
 .k-item:last-child{border:0}
 .k-item .ico{width:46px;height:46px;flex:none;border-radius:12px;display:grid;place-items:center;background:rgba(20,145,155,.12);color:var(--teal-dark);font-size:1.2rem}
 .k-item b{display:block}
 .k-item p,.k-item a{font-size:.92rem;color:var(--muted);text-decoration:none}
-.k-item a:hover{color:var(--teal)}
 
 /* Footer */
 footer{background:var(--teal-deep);color:#cfe9ea;padding:3.5rem 0 0}
 .f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.5rem}
 footer h4{color:#fff;margin-bottom:1rem;font-size:1rem}
 footer a{color:#ffd9ae;text-decoration:none}
-footer a:hover{color:#fff}
 footer ul{list-style:none}
 footer li{margin-bottom:.5rem;font-size:.9rem}
 .f-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:2.5rem;padding:1.1rem 0;text-align:center;font-size:.82rem;color:#9cc9cc}
 
 /* WA float */
-.wa-float{position:fixed;right:20px;bottom:20px;z-index:99;display:flex;align-items:center;gap:.6rem;
-  background:#25d366;color:#fff;text-decoration:none;font-weight:700;padding:.8rem 1.2rem;border-radius:999px;
-  box-shadow:0 12px 28px rgba(0,0,0,.25);transition:.25s}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:99;display:flex;align-items:center;gap:.6rem;background:#25d366;color:#fff;text-decoration:none;font-weight:700;padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 12px 28px rgba(0,0,0,.25);transition:.25s}
 .wa-float:hover{transform:translateY(-3px)}
 .wa-float svg{width:26px;height:26px;fill:#fff}
 
@@ -195,26 +180,34 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
 .reveal{opacity:0;transform:translateY(26px);transition:.7s ease}
 .reveal.visible{opacity:1;transform:none}
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media(max-width:960px){
   .grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}
-  .timeline,.diskon{grid-template-columns:1fr}
-  .profil-wrap,.two-col,.kontak-grid,.f-grid{grid-template-columns:1fr}
+  .timeline,.diskon,.profil-wrap,.two-col,.kontak-grid,.f-grid{grid-template-columns:1fr}
 }
 @media(max-width:760px){
-  .menu{position:fixed;inset:0;top:0;background:#fff;flex-direction:column;justify-content:center;gap:1.6rem;
-    transform:translateX(100%);transition:.35s;box-shadow:var(--shadow)}
+  .menu{position:fixed;inset:0;background:#fff;flex-direction:column;justify-content:center;gap:1.6rem;transform:translateX(100%);transition:.35s}
   .menu.open{transform:none}
-  .menu a{font-size:1.1rem}
-  .burger{display:block;z-index:101}
+  .burger{display:block}
   .grid-3,.grid-4{grid-template-columns:1fr}
   .topbar .container{justify-content:center;text-align:center}
+}
+@media(max-width:640px){
+  section{padding:3.5rem 0}
+  .brand img{width:46px;height:46px;border-radius:10px}
+  .brand b{font-size:.98rem}
+  .brand small{font-size:.62rem}
+  .menu a{font-size:1.15rem}
+  .hero .container{padding:3.5rem 0 4.5rem}
+  .stat{padding:.6rem 1.1rem}
+  .g-item img{height:220px}
+  .wa-float span{display:none}
+  .wa-float{padding:.95rem}
 }
 </style>
 </head>
 <body>
 
-<!-- Topbar -->
 <div class="topbar">
   <div class="container">
     <span>🕌 Desa Karanganyar, Kec. Weru, Kab. Sukoharjo, Jawa Tengah</span>
@@ -222,11 +215,10 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
   </div>
 </div>
 
-<!-- Header -->
 <header>
   <div class="container nav">
     <a class="brand" href="#beranda">
-            <img src="logo.png" alt="Logo DQH Al-Huda">
+      <img src="logo.png" onerror="this.onerror=null;this.src='logo.jpg'" alt="Logo DQH Al-Huda">
       <span><b>DQH AL-HUDA</b><small>Darul Qur'an Wal Hadits</small></span>
     </a>
     <button class="burger" id="burger" aria-label="Buka menu"><span></span><span></span><span></span></button>
@@ -234,6 +226,7 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
       <li><a href="#beranda">Beranda</a></li>
       <li><a href="#profil">Profil</a></li>
       <li><a href="#program">Program</a></li>
+      <li><a href="#galeri">Galeri</a></li>
       <li><a href="#ppdb">PPDB</a></li>
       <li><a href="#kontak">Kontak</a></li>
       <li><a class="cta" href="https://wa.me/6288215602211?text=Assalamu'alaikum,%20saya%20ingin%20informasi%20PPDB%20DQH%20Al-Huda" target="_blank" rel="noopener">Daftar Sekarang</a></li>
@@ -241,17 +234,13 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
   </div>
 </header>
 
-<!-- Hero -->
 <section class="hero" id="beranda" style="padding:0">
   <div class="container">
     <div class="arabic">دار القرآن والحديث</div>
     <h1>DARUL QUR'AN WAL HADITS <span>AL-HUDA</span></h1>
     <div class="loc">Sukoharjo • Jawa Tengah</div>
     <p class="tagline">Membentuk da'i umat bermodalkan Al-Qur'an dan Hadits, dengan pribadi beriman dan beradab sesuai petunjuk salaf.</p>
-    <div class="ppdb-badge">
-       PENERIMAAN PESERTA DIDIK BARU — TAHUN AJARAN 1448/1449 – 2027/2028
-      <small>Kuota 15 Putra &amp; 15 Putri • Setingkat Aliyah/SMA</small>
-    </div>
+    <div class="ppdb-badge">📢 PENERIMAAN PESERTA DIDIK BARU — TAHUN AJARAN 1448/1449 – 2027/2028<small>Kuota 15 Putra &amp; 15 Putri • Setingkat Aliyah/SMA</small></div>
     <div class="hero-btns">
       <a class="btn btn-orange" href="https://wa.me/6288215602211?text=Assalamu'alaikum,%20saya%20ingin%20mendaftarkan%20putra/putri%20saya%20ke%20DQH%20Al-Huda" target="_blank" rel="noopener">Daftar Sekarang</a>
       <a class="btn btn-ghost" href="#ppdb">Info PPDB</a>
@@ -264,7 +253,6 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
   </div>
 </section>
 
-<!-- Keunggulan -->
 <section id="program">
   <div class="container">
     <div class="center reveal">
@@ -273,48 +261,73 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
       <div class="divider"><i></i></div>
     </div>
     <div class="grid grid-3">
-      <div class="card reveal"><div class="ico">📖</div><span class="num">01</span><h3>Tahfidzul Qur'an</h3><p>Memprioritaskan kualitas hafalan Al-Qur'an, bukan sekedar mengejar kuantitas.</p></div>
+      <div class="card clickable reveal" data-cat="tahfidz"><div class="ico">📖</div><span class="num">01</span><h3>Tahfidzul Qur'an</h3><p>Memprioritaskan kualitas hafalan Al-Qur'an, bukan sekedar mengejar kuantitas.</p><span class="hint">Lihat dokumentasi →</span></div>
       <div class="card reveal"><div class="ico">🕌</div><span class="num">02</span><h3>Hafalan Hadits</h3><p>Hafal matan-matan hadits dan cabang-cabang ilmu syar'i lainnya.</p></div>
       <div class="card reveal"><div class="ico">🤲</div><span class="num">03</span><h3>Iman &amp; Adab</h3><p>Membentuk pribadi beriman dan beradab sesuai petunjuk salaf.</p></div>
       <div class="card reveal"><div class="ico">🗣️</div><span class="num">04</span><h3>Bahasa Arab</h3><p>Membimbing santri agar menguasai Bahasa Arab dengan baik.</p></div>
-      <div class="card reveal"><div class="ico">📣</div><span class="num">05</span><h3>Kader Da'i</h3><p>Membentuk da'i umat bermodalkan Al-Qur'an dan Hadits; terjun dakwah ke masyarakat untuk membangun mental dan skill berdakwah.</p></div>
-      <div class="card reveal"><div class="ico">🌱</div><span class="num">06</span><h3>Tauhid &amp; Amal</h3><p>Penanaman tauhid secara teori dan praktik, serta praktek ilmu bersosial/bermasyarakat sesuai tuntunan syari'at.</p></div>
+      <div class="card reveal"><div class="ico">📣</div><span class="num">05</span><h3>Kader Da'i</h3><p>Membentuk da'i umat bermodalkan Al-Qur'an dan Hadits; terjun dakwah ke masyarakat.</p></div>
+      <div class="card reveal"><div class="ico">🌱</div><span class="num">06</span><h3>Tauhid &amp; Amal</h3><p>Penanaman tauhid secara teori dan praktik, serta praktek bermasyarakat sesuai syari'at.</p></div>
     </div>
 
-    <!-- Kurikulum -->
     <div class="center reveal" style="margin-top:4rem">
       <div class="kicker">Kurikulum</div>
       <h2 class="sec-title">Kurikulum Pendidikan</h2>
       <div class="divider"><i></i></div>
       <div class="chips">
-        <span class="chip">Tauhid</span><span class="chip">Fikih Ibadah &amp; Muamalah</span><span class="chip">Bahasa Arab</span>
-        <span class="chip">Nahwu</span><span class="chip">Shorof</span><span class="chip">Tarjamah</span>
-        <span class="chip">Fikih Siroh</span><span class="chip">Adab</span><span class="chip">Tsaqofah Islamiyah</span>
-        <span class="chip">Tajwid &amp; Tahsin</span><span class="chip">Ilmu Waris</span><span class="chip">Ekstrakurikuler</span><span class="chip">Lifeskill</span>
+        <span class="chip">Tauhid</span><span class="chip">Fikih Ibadah &amp; Muamalah</span><span class="chip">Bahasa Arab</span><span class="chip">Nahwu</span><span class="chip">Shorof</span><span class="chip">Tarjamah</span><span class="chip">Fikih Siroh</span><span class="chip">Adab</span><span class="chip">Tsaqofah Islamiyah</span><span class="chip">Tajwid &amp; Tahsin</span><span class="chip">Ilmu Waris</span><span class="chip">Ekstrakurikuler</span><span class="chip">Lifeskill</span>
       </div>
     </div>
 
-    <!-- Ekstrakurikuler -->
     <div class="center reveal" style="margin-top:4rem">
-      <div class="kicker">Penunjang</div>
+      <div class="kicker">Penunjang — klik untuk melihat dokumentasi</div>
       <h2 class="sec-title">Ekstrakurikuler &amp; Lifeskill</h2>
       <div class="divider"><i></i></div>
     </div>
     <div class="grid grid-4">
-      <div class="card extra reveal"><div class="ico">🏹</div><h3>Memanah</h3></div>
-      <div class="card extra reveal"><div class="ico">🏊</div><h3>Berenang</h3></div>
-      <div class="card extra reveal"><div class="ico">⚽</div><h3>Futsal</h3></div>
-      <div class="card extra reveal"><div class="ico">🥋</div><h3>Beladiri</h3></div>
-      <div class="card extra reveal"><div class="ico">🍳</div><h3>Tata Boga</h3></div>
-      <div class="card extra reveal"><div class="ico">💪</div><h3>Kemandirian</h3></div>
-      <div class="card extra reveal"><div class="ico">🥾</div><h3>Long March</h3></div>
-      <div class="card extra reveal"><div class="ico">🏕️</div><h3>Rihlah</h3></div>
+      <div class="card extra clickable reveal" data-cat="memanah"><div class="ico">🏹</div><h3>Memanah</h3><span class="hint">Lihat dokumentasi →</span></div>
+      <div class="card extra clickable reveal" data-cat="berenang"><div class="ico">🏊</div><h3>Berenang</h3><span class="hint">Lihat dokumentasi →</span></div>
+      <div class="card extra clickable reveal" data-cat="futsal"><div class="ico">⚽</div><h3>Futsal</h3><span class="hint">Lihat dokumentasi →</span></div>
+      <div class="card extra clickable reveal" data-cat="beladiri"><div class="ico">🥋</div><h3>Beladiri</h3><span class="hint">Lihat dokumentasi →</span></div>
+      <div class="card extra clickable reveal" data-cat="tata-boga"><div class="ico">🍳</div><h3>Tata Boga</h3><span class="hint">Lihat dokumentasi →</span></div>
+      <div class="card extra clickable reveal" data-cat="kemandirian"><div class="ico">💪</div><h3>Kemandirian</h3><span class="hint">Lihat dokumentasi →</span></div>
+      <div class="card extra clickable reveal" data-cat="long-march"><div class="ico">🥾</div><h3>Long March</h3><span class="hint">Lihat dokumentasi →</span></div>
+      <div class="card extra clickable reveal" data-cat="rihlah"><div class="ico">🏕️</div><h3>Rihlah</h3><span class="hint">Lihat dokumentasi →</span></div>
     </div>
   </div>
 </section>
 
-<!-- Profil -->
-<section id="profil" style="background:#fff">
+<!-- Galeri -->
+<section id="galeri" style="background:rgba(255,255,255,.75)">
+  <div class="container">
+    <div class="center reveal">
+      <div class="kicker">Dokumentasi</div>
+      <h2 class="sec-title">Galeri Kegiatan Santri</h2>
+      <div class="divider"><i></i></div>
+      <div class="chips" style="margin-bottom:2rem">
+        <button class="chip-f active" data-filter="semua">Semua</button>
+        <button class="chip-f" data-filter="tahfidz">Tahfidz</button>
+        <button class="chip-f" data-filter="memanah">Memanah</button>
+        <button class="chip-f" data-filter="berenang">Berenang</button>
+        <button class="chip-f" data-filter="futsal">Futsal</button>
+        <button class="chip-f" data-filter="beladiri">Beladiri</button>
+        <button class="chip-f" data-filter="tata-boga">Tata Boga</button>
+        <button class="chip-f" data-filter="kemandirian">Kemandirian</button>
+        <button class="chip-f" data-filter="long-march">Long March</button>
+        <button class="chip-f" data-filter="rihlah">Rihlah</button>
+      </div>
+    </div>
+    <div class="grid grid-3" id="galeriGrid">
+      <figure class="g-item reveal" data-cat="tahfidz">
+        <img src="galeri-1.jpg" alt="Kegiatan santri DQH Al-Huda" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <figcaption>Suasana pembelajaran &amp; ujian santri</figcaption>
+      </figure>
+      <!-- Untuk menambah foto: upload file (mis. memanah-1.jpg) lalu copy blok <figure> di atas, ganti src dan data-cat -->
+    </div>
+    <p id="galeriEmpty" class="g-empty" hidden>📷 Dokumentasi untuk kegiatan ini segera hadir, insya Allah.</p>
+  </div>
+</section>
+
+<section id="profil" style="background:rgba(255,255,255,.75)">
   <div class="container">
     <div class="reveal">
       <div class="kicker">Tentang Kami</div>
@@ -345,7 +358,6 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
   </div>
 </section>
 
-<!-- PPDB -->
 <section id="ppdb">
   <div class="container">
     <div class="center reveal">
@@ -354,14 +366,11 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
       <div class="divider"><i></i></div>
       <p class="lead">Kuota <b>15 Putra</b> dan <b>15 Putri</b> • Setingkat Aliyah/SMA</p>
     </div>
-
-    <!-- Timeline -->
     <div class="timeline">
       <div class="t-card reveal"><div class="step">1</div><h3>Gelombang 1</h3><div class="date">15 September – 25 Desember 2026</div><p>Pendaftaran gelombang pertama.</p></div>
       <div class="t-card orange reveal"><div class="step">2</div><h3>Tes Seleksi &amp; Wawancara</h3><div class="date">27 Desember 2026</div><p><i>One day service</i> — selesai dalam satu hari.</p></div>
       <div class="t-card reveal"><div class="step">3</div><h3>Gelombang 2</h3><div class="date">1 Januari – 31 Mei 2027</div><p>Jika kuota belum terpenuhi.</p></div>
     </div>
-
     <div class="two-col">
       <div class="panel reveal">
         <h3><span>📋</span> Syarat &amp; Ketentuan</h3>
@@ -385,8 +394,6 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
         </div>
       </div>
     </div>
-
-    <!-- Biaya -->
     <div class="center reveal" style="margin-top:3.5rem">
       <h2 class="sec-title" style="font-size:1.5rem">Biaya Pendidikan</h2>
       <div class="divider"><i></i></div>
@@ -406,8 +413,6 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
         </tbody>
       </table>
     </div>
-
-    <!-- Diskon -->
     <div class="diskon">
       <div class="d-card o reveal"><b>🎓 Diskon 50%</b><p>Diskon pengembangan 50% bagi lulusan DQH 'Amma yang mendaftar sebelum 30 Oktober 2026.</p></div>
       <div class="d-card reveal"><b>⏰ Diskon Rp 500.000</b><p>Diskon pengembangan bagi pendaftar sebelum 30 Oktober 2026.</p></div>
@@ -416,8 +421,7 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
   </div>
 </section>
 
-<!-- Kontak -->
-<section id="kontak" style="background:#fff">
+<section id="kontak" style="background:rgba(255,255,255,.75)">
   <div class="container">
     <div class="reveal">
       <div class="kicker">Hubungi Kami</div>
@@ -440,7 +444,6 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
   <div class="container f-grid">
     <div>
@@ -453,6 +456,7 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
         <li><a href="#beranda">Beranda</a></li>
         <li><a href="#profil">Profil</a></li>
         <li><a href="#program">Program</a></li>
+        <li><a href="#galeri">Galeri</a></li>
         <li><a href="#ppdb">PPDB</a></li>
         <li><a href="#kontak">Kontak</a></li>
       </ul>
@@ -468,7 +472,6 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
   <div class="f-bottom">© 2026 Darul Qur'an Wal Hadits Al-Huda — Sukoharjo, Jawa Tengah</div>
 </footer>
 
-<!-- WhatsApp floating -->
 <a class="wa-float" href="https://wa.me/6288215602211?text=Assalamu'alaikum,%20saya%20ingin%20informasi%20PPDB%20DQH%20Al-Huda" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
   <span>Chat TU</span>
@@ -480,9 +483,35 @@ const burger=document.getElementById('burger'),menu=document.getElementById('men
 burger.addEventListener('click',()=>menu.classList.toggle('open'));
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
 
-// Animasi muncul saat scroll
+// Reveal saat scroll
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Filter galeri
+const figs=[...document.querySelectorAll('.g-item')];
+const chipsF=[...document.querySelectorAll('.chip-f')];
+const empty=document.getElementById('galeriEmpty');
+function setFilter(cat){
+  chipsF.forEach(c=>c.classList.toggle('active',c.dataset.filter===cat));
+  let n=0;
+  figs.forEach(f=>{
+    const show=(cat==='semua'||f.dataset.cat===cat)&&f.dataset.broken!=='1';
+    f.style.display=show?'':'none';
+    if(show)n++;
+  });
+  empty.hidden=n>0;
+}
+chipsF.forEach(c=>c.addEventListener('click',()=>setFilter(c.dataset.filter)));
+
+// Klik kartu ekstrakurikuler / tahfidz → buka dokumentasinya
+document.querySelectorAll('[data-cat]').forEach(el=>{
+  if(el.classList.contains('g-item'))return;
+  el.addEventListener('click',()=>{
+    setFilter(el.dataset.cat);
+    document.getElementById('galeri').scrollIntoView({behavior:'smooth'});
+  });
+});
+setFilter('semua');
 </script>
 </body>
 </html>
