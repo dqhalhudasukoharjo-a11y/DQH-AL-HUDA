@@ -568,6 +568,24 @@ document.querySelectorAll('[data-cat]').forEach(el=>{
   });
 });
 setFilter('semua');
+  // Formulir PPDB → kirim ke WhatsApp
+document.getElementById('formPPDB').addEventListener('submit',function(e){
+  e.preventDefault();
+  const f=new FormData(this);
+  const lines=[
+    "Assalamu'alaikum — Pendaftaran PPDB DQH Al-Huda",
+    "Nama: "+f.get('nama'),
+    "Jenis kelamin: "+f.get('jk'),
+    "TTL: "+f.get('ttl'),
+    "Usia: "+f.get('usia'),
+    "Asal sekolah: "+f.get('sekolah'),
+    "Orang tua/wali: "+f.get('ortu'),
+    "No. HP wali: "+f.get('hp'),
+    "Gelombang: "+f.get('gel'),
+    "Alamat: "+f.get('alamat')
+  ];
+  window.open('https://wa.me/6288215602211?text='+encodeURIComponent(lines.join('\n')),'_blank');
+});
 </script>
 </body>
 </html>
