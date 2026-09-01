@@ -259,7 +259,10 @@ form input:focus,form select:focus{outline:2px solid var(--teal);border-color:va
 .m-group{display:flex;gap:3rem;padding-right:3rem;flex:none}
 .m-group span{color:#fff;font-weight:700;font-size:.85rem;letter-spacing:1.5px}
 @keyframes marquee{to{transform:translateX(-50%)}}
-  #galeriGrid{align-items:start}
+#galeriGrid{display:block;columns:3;column-gap:1.2rem}
+#galeriGrid .g-item{break-inside:avoid;margin:0 0 1.2rem}
+@media(max-width:960px){#galeriGrid{columns:2}}
+@media(max-width:640px){#galeriGrid{columns:1}}
 </style>
 </head>
 <body>
