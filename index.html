@@ -237,8 +237,28 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
 .kb-cta:hover{transform:translateY(-2px);background:linear-gradient(135deg,#f3d489,#d9a441);box-shadow:0 14px 32px rgba(201,143,45,.5)}
 @media(max-width:640px){.kb-divider{width:60%;height:1px;background:linear-gradient(90deg,transparent,rgba(233,196,106,.75),transparent);background-size:200% 100%;animation:kbFlowX 3.4s linear infinite}.kb-cta::after{display:none}}
 @keyframes kbFlowX{from{background-position:-100% 0}to{background-position:100% 0}}
-  
-  /* WA float */
+
+/* Papan kuota — edisi selaras & tenang */
+.kuota-board{background:linear-gradient(160deg,#ffffff 0%,rgba(234,250,249,.9) 100%);border:1px solid rgba(20,145,155,.22);border-radius:20px;box-shadow:var(--shadow);color:var(--teal-deep)}
+.kuota-board::before,.kuota-board::after{content:none}
+.kb-glow{animation:none}
+.kb-glow-a{background:var(--teal);opacity:.10}
+.kb-glow-b{background:var(--orange);opacity:.09}
+.kb-live{background:rgba(20,145,155,.1);border-color:rgba(20,145,155,.32);color:var(--teal-deep)}
+.kb-live i{background:#22c55e;animation:pulse 1.8s infinite}
+.kb-date{color:var(--muted)}
+.kb-angka{background:none;-webkit-background-clip:border-box;background-clip:border-box;-webkit-text-fill-color:currentColor;color:var(--teal-dark);animation:none;filter:none}
+.kb-label{color:var(--teal-deep)}
+.kb-sub{color:var(--muted)}
+.kb-divider{background:linear-gradient(180deg,transparent,rgba(20,145,155,.5),transparent);background-size:auto;animation:none}
+.kb-foot{border-top-color:rgba(20,145,155,.3)}
+.kb-chip{background:rgba(20,145,155,.1);border-color:rgba(20,145,155,.32);color:var(--teal-deep)}
+.kb-cta{background:linear-gradient(135deg,var(--orange-soft),var(--orange));color:#fff;border:0;box-shadow:0 10px 24px rgba(247,127,0,.28)}
+.kb-cta::after{content:none}
+.kb-cta:hover{transform:translateY(-2px);background:linear-gradient(135deg,var(--orange),#e06e00);box-shadow:0 14px 30px rgba(247,127,0,.4)}
+@media(max-width:640px){.kb-divider{background:linear-gradient(90deg,transparent,rgba(20,145,155,.5),transparent);background-size:auto;animation:none}}  
+
+/* WA float */
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:99;display:flex;align-items:center;gap:.6rem;background:#25d366;color:#fff;text-decoration:none;font-weight:700;padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 12px 28px rgba(0,0,0,.25);transition:.25s;animation:waBob 3s ease-in-out infinite}
 @keyframes waBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 .wa-float:hover{transform:translateY(-3px)}
@@ -406,8 +426,8 @@ form input:focus,form select:focus{outline:2px solid var(--teal);border-color:va
 
       <div class="kb-foot">
         <!-- ✏️ UPDATE: jumlah & komposisi pendaftar -->
-        <span class="kb-chip">✅ Alhamdulillah 2 santri telah bergabung mendaftar (1 putra, 1 putri)</span>
-        <a class="kb-cta" href="#ppdb"> Marhaban ya Calon Santri — Tafaddhol Mendaftar → </a>
+        <span class="kb-chip">✅ Alhamdulillah 2 santri telah bergabung mendaftar ( 1 putra, 1 putri )</span>
+        <a class="kb-cta" href="#ppdb"> Marhaban ya Calon Santri, Tafaddhol Mendaftar → </a>
       </div>
     </div>
   </div>
