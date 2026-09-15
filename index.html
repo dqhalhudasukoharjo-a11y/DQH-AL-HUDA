@@ -282,7 +282,11 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
 .kb-cta:hover{transform:translateY(-2px);background:linear-gradient(135deg,var(--orange),#e06e00);box-shadow:0 14px 32px rgba(0,0,0,.35)}
 @media(max-width:640px){.kb-divider{background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);animation:none}.kb-slots i{width:8px;height:13px}}
  
-/* WA float */
+/* Sembunyikan lentera & bintang */
+.kb-slots{display:none}
+.kb-divider::after{content:none}
+  
+  /* WA float */
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:99;display:flex;align-items:center;gap:.6rem;background:#25d366;color:#fff;text-decoration:none;font-weight:700;padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 12px 28px rgba(0,0,0,.25);transition:.25s;animation:waBob 3s ease-in-out infinite}
 @keyframes waBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 .wa-float:hover{transform:translateY(-3px)}
