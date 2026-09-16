@@ -318,38 +318,32 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
 .k-item:nth-child(2) .k-ico-teal{background:linear-gradient(135deg,#25d366,#128c7e);box-shadow:0 6px 16px rgba(18,140,126,.35)}
 .k-item:nth-child(4) .k-ico-teal{background:linear-gradient(135deg,#ff9d33,#f77f00);box-shadow:0 6px 16px rgba(247,127,0,.35)}
 .k-item:nth-child(1) .k-ico-teal{background:linear-gradient(135deg,#17a2ac,#084c54);box-shadow:0 6px 16px rgba(8,76,84,.35)}
-  
- /* Tabel investasi — edisi responsif & hidup */
-.table-wrap{border-radius:20px;box-shadow:0 16px 40px rgba(8,76,84,.12);border:1px solid var(--line)}
-thead th{background:linear-gradient(90deg,var(--teal-deep),var(--teal-dark));padding:1rem 1.2rem;font-size:.85rem;letter-spacing:1.2px;text-transform:uppercase}
-tbody td{padding:1rem 1.2rem}
-tbody td:first-child{font-weight:700;color:var(--teal-deep)}
-tbody td:nth-child(2){font-weight:700;color:var(--ink)}
-tbody tr{transition:background .25s}
-tbody tr:hover{background:rgba(20,145,155,.08)}
-tbody tr:hover td:first-child{box-shadow:inset 4px 0 0 var(--orange)}
-.table-wrap.visible tbody tr{animation:rowIn .55s ease backwards}
-.table-wrap.visible tbody tr:nth-child(1){animation-delay:.05s}
-.table-wrap.visible tbody tr:nth-child(2){animation-delay:.12s}
-.table-wrap.visible tbody tr:nth-child(3){animation-delay:.19s}
-.table-wrap.visible tbody tr:nth-child(4){animation-delay:.26s}
-.table-wrap.visible tbody tr:nth-child(5){animation-delay:.33s}
-.table-wrap.visible tbody tr:nth-child(6){animation-delay:.40s}
-.table-wrap.visible tbody tr:nth-child(7){animation-delay:.47s}
-.table-wrap.visible tbody tr:nth-child(8){animation-delay:.54s}
-@keyframes rowIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-@media(max-width:640px){
-  table{min-width:0}
-  .table-wrap{overflow:visible;border:0;box-shadow:none;background:transparent;border-radius:0}
-  thead{display:none}
-  tbody tr{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);margin-bottom:.9rem;padding:.9rem 1.1rem .7rem}
-  tbody tr:nth-child(even){background:#fff}
-  tbody td{display:block;border:0;padding:.25rem 0}
-  tbody td:first-child{font-size:1rem;font-weight:800;color:var(--teal-dark);padding-bottom:.4rem;border-bottom:1px dashed var(--line);margin-bottom:.4rem;box-shadow:none}
-  tbody td:nth-child(2){font-weight:700;color:var(--ink)}
-  tbody td:nth-child(2)::before{content:"Nominal · ";color:var(--muted);font-weight:600;font-size:.78rem}
-  tbody td:nth-child(3){color:var(--muted);font-size:.82rem}
-  tbody td:nth-child(3)::before{content:"Keterangan · ";color:var(--muted);font-weight:600;font-size:.78rem}
+
+/* Menu investasi — kartu kategori */
+.table-wrap{display:none}
+.inv-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+.inv-card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:1.4rem 1.3rem;position:relative;overflow:hidden;transition:.3s}
+.inv-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--teal),var(--teal-dark))}
+.inv-card.inv-once::before{background:linear-gradient(90deg,var(--orange-soft),var(--orange))}
+.inv-card:hover{transform:translateY(-5px)}
+.inv-head{display:flex;gap:.8rem;align-items:center;margin-bottom:.8rem}
+.inv-ico{width:44px;height:44px;flex:none;border-radius:12px;display:grid;place-items:center;font-size:1.3rem;background:linear-gradient(135deg,rgba(20,145,155,.14),rgba(247,127,0,.14))}
+.inv-head b{display:block;font-size:1.02rem;color:var(--teal-dark)}
+.inv-head small{color:var(--muted);font-size:.75rem}
+.inv-card ul{list-style:none}
+.inv-card li{display:flex;justify-content:space-between;gap:.8rem;padding:.5rem 0;border-bottom:1px dashed var(--line);font-size:.88rem;align-items:baseline}
+.inv-card li:last-child{border:0}
+.inv-card li span{color:var(--muted)}
+.inv-card li b{color:var(--teal-deep);text-align:right}
+.inv-note{font-size:.75rem;color:var(--muted);margin-top:.6rem}
+.inv-swipe{display:none;text-align:center;font-size:.75rem;color:var(--muted);margin-top:.2rem}
+.inv-wrap.visible .inv-card{animation:rowIn .55s ease backwards}
+.inv-wrap.visible .inv-card:nth-child(2){animation-delay:.12s}
+.inv-wrap.visible .inv-card:nth-child(3){animation-delay:.24s}
+@media(max-width:760px){
+  .inv-wrap{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1rem;padding-bottom:.8rem;margin-top:1.6rem;-webkit-overflow-scrolling:touch}
+  .inv-card{flex:0 0 82%;scroll-snap-align:center}
+  .inv-swipe{display:block}
 }
   
   /* WA float */
@@ -854,6 +848,35 @@ form input:focus,form select:focus{outline:2px solid var(--teal);border-color:va
         </tbody>
       </table>
     </div>
+
+    <div class="inv-wrap reveal">
+  <div class="inv-card">
+    <div class="inv-head"><span class="inv-ico">🌙</span><div><b>Per Bulan</b><small>Syahriyah / SPP</small></div></div>
+    <ul>
+      <li><span>SPP (tiga pilihan)</span><b>Rp 800.000 / 900.000 / 1.000.000</b></li>
+    </ul>
+    <p class="inv-note">Pilihan disesuaikan dengan kemampuan wali santri.</p>
+  </div>
+  <div class="inv-card">
+    <div class="inv-head"><span class="inv-ico">📚</span><div><b>Per Tahun</b><small>Dibayar tiap tahun ajaran</small></div></div>
+    <ul>
+      <li><span>Buku Pelajaran</span><b>Rp 280.000</b></li>
+      <li><span>Infaq Kesehatan</span><b>Rp 150.000</b></li>
+      <li><span>FC + Ujian</span><b>Rp 300.000</b></li>
+      <li><span>Ekstrakurikuler &amp; Lifeskill</span><b>Rp 850.000</b></li>
+    </ul>
+  </div>
+  <div class="inv-card inv-once">
+    <div class="inv-head"><span class="inv-ico">🎓</span><div><b>Sekali Saja</b><small>Selama menjadi santri</small></div></div>
+    <ul>
+      <li><span>Infak Pengembangan</span><b>Rp 3.500.000 / 4.000.000 / 4.500.000</b></li>
+      <li><span>Seragam</span><b>Putra Rp 300.000 • Putri Rp 350.000</b></li>
+      <li><span>Biaya Pendaftaran</span><b>Rp 250.000</b></li>
+    </ul>
+  </div>
+</div>
+<p class="inv-swipe">Geser untuk melihat kategori lain →</p>
+    
     <div class="diskon">
       <div class="d-card o reveal"><b>🎓 Diskon 50%</b><p>Diskon pengembangan 50% bagi lulusan DQH 'Amma yang mendaftar sebelum 30 Oktober 2026.</p></div>
       <div class="d-card reveal"><b>⏰ Diskon Rp 500.000</b><p>Diskon pengembangan bagi pendaftar sebelum 30 Oktober 2026.</p></div>
