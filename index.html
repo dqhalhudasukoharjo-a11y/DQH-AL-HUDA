@@ -302,6 +302,13 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
 .f-ig-ico{width:22px;height:22px;border-radius:7px;display:inline-grid;place-items:center;background:radial-gradient(circle at 30% 105%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%);flex:none}
 .f-ig-ico svg{width:13px;height:13px;fill:#fff}
   
+  /* Indikator menu meluncur */
+.nav{position:relative}
+.menu a.active::after{content:none}
+.menu-glide{position:absolute;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--teal),var(--orange));transition:left .45s cubic-bezier(.65,.05,.36,1),width .45s cubic-bezier(.65,.05,.36,1),top .3s ease;opacity:0;pointer-events:none;z-index:5}
+.menu-glide.on{opacity:1}
+@media(max-width:760px){.menu-glide{display:none}}
+  
   /* WA float */
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:99;display:flex;align-items:center;gap:.6rem;background:#25d366;color:#fff;text-decoration:none;font-weight:700;padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 12px 28px rgba(0,0,0,.25);transition:.25s;animation:waBob 3s ease-in-out infinite}
 @keyframes waBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
@@ -415,6 +422,7 @@ form input:focus,form select:focus{outline:2px solid var(--teal);border-color:va
       <li><a href="#kontak">Kontak</a></li>
       <li><a class="cta" href="https://wa.me/6288215602211?text=Assalamu'alaikum,%20saya%20ingin%20informasi%20PPDB%20DQH%20Al-Huda" target="_blank" rel="noopener">Daftar Sekarang</a></li>
     </ul>
+ <span class="menu-glide" id="menuGlide"></span>
   </nav>
 </header>
   <main>
@@ -981,6 +989,26 @@ if('IntersectionObserver' in window&&papan){
   var ioM=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){buildSlots();ioM.disconnect();}});},{threshold:.3});
   ioM.observe(papan);
 }else{buildSlots();}
+</script>
+<script>
+// Indikator menu meluncur
+(function(){
+  var glide=document.getElementById('menuGlide');
+  if(!glide)return;
+  var links=[].slice.call(document.querySelectorAll('.menu a:not(.cta)'));
+  function move(){
+    var act=null;
+    for(var i=0;i<links.length;i++){if(links[i].classList.contains('active')){act=links[i];break;}}
+    if(!act||window.innerWidth<=760){glide.classList.remove('on');return;}
+    glide.style.left=act.offsetLeft+'px';
+    glide.style.width=act.offsetWidth+'px';
+    glide.style.top=(act.offsetTop+act.offsetHeight+6)+'px';
+    glide.classList.add('on');
+  }
+  window.addEventListener('scroll',move,{passive:true});
+  window.addEventListener('resize',move);
+  move();
+})();
 </script>
 </body>
 </html>
