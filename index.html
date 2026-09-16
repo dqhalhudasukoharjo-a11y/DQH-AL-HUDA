@@ -360,6 +360,23 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
 .invite-btns .btn{font-size:1rem;padding:.95rem 1.8rem}
 @media(max-width:640px){.invite-box{padding:3rem 1.2rem}.invite-arabic{font-size:1.3rem}}
  
+/* Undangan penutup — edisi hidup */
+.invite{background:linear-gradient(140deg,var(--teal-deep) 0%,var(--teal-dark) 50%,var(--teal) 100%);background-size:200% 200%;animation:invBreath 14s ease-in-out infinite}
+@keyframes invBreath{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.invite::before{animation:invDrift 60s linear infinite}
+@keyframes invDrift{from{background-position:0 0}to{background-position:72px 144px}}
+.invite::after{animation:invGlow 6s ease-in-out infinite}
+@keyframes invGlow{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.15)}}
+.invite-box.visible .invite-arabic{animation:invDown .8s ease both}
+.invite-box.visible h2{animation:invUp .8s ease .15s both}
+.invite-box.visible .invite-quote{animation:invUp .8s ease .3s both}
+.invite-box.visible .invite-btns{animation:invPop .7s cubic-bezier(.34,1.56,.64,1) .45s both}
+@keyframes invDown{from{opacity:0;transform:translateY(-22px)}to{opacity:1;transform:none}}
+@keyframes invUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes invPop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+.invite-btns .btn-orange{animation:invBeacon 3s ease-in-out 1.6s infinite}
+@keyframes invBeacon{0%,100%{box-shadow:0 10px 24px rgba(247,127,0,.4)}50%{box-shadow:0 10px 34px rgba(247,127,0,.75),0 0 0 6px rgba(247,127,0,.12)}}
+  
   /* WA float */
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:99;display:flex;align-items:center;gap:.6rem;background:#25d366;color:#fff;text-decoration:none;font-weight:700;padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 12px 28px rgba(0,0,0,.25);transition:.25s;animation:waBob 3s ease-in-out infinite}
 @keyframes waBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
@@ -632,139 +649,139 @@ form input:focus,form select:focus{outline:2px solid var(--teal);border-color:va
     </div>
     <div class="grid grid-3" id="galeriGrid">
       <figure class="g-item reveal" data-cat="tahfidz">
-        <img src="tahfidz2.jpg" alt="Kegiatan santri DQH Al-Huda" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="tahfidz2.jpg" alt="Kegiatan santri DQH Al-Huda" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Suasana Halaqoh Tahfidz</figcaption>
       </figure>
        <figure class="g-item reveal" data-cat="khitobah">
-        <img src="khitobahputra5.jpeg" alt="Santri putra telah melaksanakan khitobah" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="khitobahputra5.jpeg" alt="Santri putra telah melaksanakan khitobah" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Niha'ie telah melaksanakan Khitobah Bahasa Indonesia</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="khitobah">
-        <img src="khitobahputra4.jpeg" alt="Santri putra sedang melaksanakan khitobah" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="khitobahputra4.jpeg" alt="Santri putra sedang melaksanakan khitobah" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Niha'ie melaksanakan Khitobah Bahasa Indonesia</figcaption>
       </figure>
        <figure class="g-item reveal" data-cat="tahfidz">
-        <img src="tasmi30juzputri.jpeg" alt="Tasmi' 30 Juz Putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="tasmi30juzputri.jpeg" alt="Tasmi' 30 Juz Putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Tasmi' 30 Juz Putri</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="camp qur'an">
-        <img src="campquran4.jpg" alt="Halaqoh Camp Qur'an" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="campquran4.jpg" alt="Halaqoh Camp Qur'an" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Halaqoh Camp Qur'an Putra</figcaption>
       </figure>
        <figure class="g-item reveal" data-cat="camp qur'an">
-        <img src="campquran3.jpg" alt="Halaqoh Camp Qur'an" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="campquran3.jpg" alt="Halaqoh Camp Qur'an" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Muhasabah Camp Qur'an Putra</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="camp qur'an">
-        <img src="campquran2.JPG" alt="Rileks Sejenak Camp Qur'an Putra" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="campquran2.JPG" alt="Rileks Sejenak Camp Qur'an Putra" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Rileks sejenak Camp Qur'an Putra di Air terjun Jumok</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="memanah">
-        <img src="memanah.jpeg" alt="Latihan memanah santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="memanah.jpeg" alt="Latihan memanah santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Latihan memanah santri</figcaption>
       </figure>
        <figure class="g-item reveal" data-cat="memanah">
-        <img src="memanahputra2.jpeg" alt="Latihan memanah santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="memanahputra2.jpeg" alt="Latihan memanah santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Latihan memanah santri putra</figcaption>
       </figure>
         <figure class="g-item reveal" data-cat="tata-boga">
-        <img src="tataboga.jpeg" alt="Santri praktik tata boga" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="tataboga.jpeg" alt="Santri praktik tata boga" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Praktik tata boga santri putri</figcaption>
       </figure>
        <figure class="g-item reveal" data-cat="tata-boga">
-        <img src="tataboga2.jpeg" alt="Santri praktik tata boga" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="tataboga2.jpeg" alt="Santri praktik tata boga" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Hasil masakan tata boga santri putri</figcaption>
       </figure>
        <figure class="g-item reveal" data-cat="long-march">
-        <img src="siyahahputra.jpg" alt="Siyahah santri putra" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="siyahahputra.jpg" alt="Siyahah santri putra" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Siyahah santri putra menuju Umbul Ponggok</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="long-march">
-        <img src="siyahahputra2.jpg" alt="Siyahah santri putra" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="siyahahputra2.jpg" alt="Siyahah santri putra" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Siyahah putra ke Umbul Ponggok sejauh 35KM</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="long-march">
-        <img src="siyahahputri5.jpeg" alt="Siyahah santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="siyahahputri5.jpeg" alt="Siyahah santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Siyahah santri putri menuju pantai </figcaption>
       </figure>
        <figure class="g-item reveal" data-cat="long-march">
-        <img src="siyahahputri.jpeg" alt="Siyahah santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="siyahahputri.jpeg" alt="Siyahah santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Siyahah santri putri sampai di pantai midodaren sejauh 21KM</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="rihlah">
-        <img src="rihlahputra.jpg" alt="Rihlah santri putra" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="rihlahputra.jpg" alt="Rihlah santri putra" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Di puncak gunung Sumbing 3371mdpl</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="rihlah">
-        <img src="rihlahputra8.jpeg" alt="Rihlah santri putra ke gunung sindoro" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="rihlahputra8.jpeg" alt="Rihlah santri putra ke gunung sindoro" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Di puncak gunung Sindoro 3153mdpl</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="rihlah">
-        <img src="rihlahputra5.jpg" alt="Rihlah santri putra" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="rihlahputra5.jpg" alt="Rihlah santri putra" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Di area camp gunung Merbabu 3178mdpl</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="rihlah">
-        <img src="rihlahputri3.jpeg" alt="Rihlah santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="rihlahputri3.jpeg" alt="Rihlah santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Aktifitas outdoor area camp kampung gunung</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="rihlah">
-        <img src="rihlahputri9.jpeg" alt="Rihlah santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="rihlahputri9.jpeg" alt="Rihlah santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Di puncak Gunung Andong</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="rihlah">
-        <img src="rihlahputri7.jpeg" alt="Rihlah santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="rihlahputri7.jpeg" alt="Rihlah santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Di Air terjun kampung gunung</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="memanah">
-        <img src="memanahputri2.jpeg" alt="Latihan memanah santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="memanahputri2.jpeg" alt="Latihan memanah santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Latihan memanah santri putri</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="memanah">
-        <img src="memanahputri4.jpeg" alt="Latihan memanah santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="memanahputri4.jpeg" alt="Latihan memanah santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Latihan memanah santri putri</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="kemandirian">
-        <img src="kemandirian1.jpg" alt="kemandirian santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="kemandirian1.jpg" alt="kemandirian santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Suasana bersih-bersih lingkungan pondok</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="kemandirian">
-        <img src="kemandirian2.jpg" alt="kemandirian santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="kemandirian2.jpg" alt="kemandirian santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Suasana bersih-bersih lingkungan pondok</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="beladiri">
-        <img src="beladiri.jpg" alt="Latihan beladiri santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="beladiri.jpg" alt="Latihan beladiri santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Persahabatan dengan pondok lain</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="beladiri">
-        <img src="beladiri2.jpg" alt="Latihan beladiri santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="beladiri2.jpg" alt="Latihan beladiri santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Latihan beladiri santri</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="futsal">
-        <img src="futsalputra.jpeg" alt="futsal santri putra" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="futsalputra.jpeg" alt="futsal santri putra" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>bermain futsal santri putra</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="futsal">
-        <img src="futsalputra2.jpeg" alt="futsal santri putra" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="futsalputra2.jpeg" alt="futsal santri putra" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Persahabatan futsal santri putra dengan pondok lain</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="tahfidz">
-        <img src="bacaquran2.jpeg" alt="Kegiatan Qur'an santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="bacaquran2.jpeg" alt="Kegiatan Qur'an santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Membaca Qur'an bersama santri putri</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="berenang">
-        <img src="berenang2.jpeg" alt="Kegiatan berenang santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="berenang2.jpeg" alt="Kegiatan berenang santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Pemanasan sebelum berenang</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="berenang">
-        <img src="berenangputri.jpeg" alt="Kegiatan berenang santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="berenangputri.jpeg" alt="Kegiatan berenang santri putri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Extrakurikuler berenang putri ke umbul asri</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="berenang">
-        <img src="berenangputra4.jpeg" alt="Kegiatan berenang santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="berenangputra4.jpeg" alt="Kegiatan berenang santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Pemanasan sebelum berenang</figcaption>
       </figure>
       <figure class="g-item reveal" data-cat="berenang">
-        <img src="berenang.jpeg" alt="Kegiatan berenang santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
+        <img loading="lazy" src="berenang.jpeg" alt="Kegiatan berenang santri" onerror="this.closest('figure').dataset.broken='1';this.closest('figure').style.display='none'">
         <figcaption>Pemanasan sebelum berenang</figcaption>
       </figure>
     </div>
