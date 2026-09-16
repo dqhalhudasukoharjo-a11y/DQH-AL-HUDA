@@ -377,6 +377,40 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
 .invite-btns .btn-orange{animation:invBeacon 3s ease-in-out 1.6s infinite}
 @keyframes invBeacon{0%,100%{box-shadow:0 10px 24px rgba(247,127,0,.4)}50%{box-shadow:0 10px 34px rgba(247,127,0,.75),0 0 0 6px rgba(247,127,0,.12)}}
   
+/* Undangan penutup — edisi bercahaya */
+.invite{background:linear-gradient(140deg,var(--teal-deep),var(--teal-dark) 55%,var(--teal));overflow:hidden}
+.invite::after{content:"";position:absolute;top:0;bottom:0;width:45%;left:-50%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.06) 45%,rgba(255,255,255,.14) 50%,rgba(255,255,255,.06) 55%,transparent);transform:skewX(-18deg);animation:invSweep 7s ease-in-out infinite}
+@keyframes invSweep{0%{left:-50%}60%{left:120%}100%{left:120%}}
+.inv-orb{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none}
+.inv-orb.o1{width:300px;height:300px;background:var(--orange);opacity:.16;top:-90px;right:-70px;animation:invFloat 9s ease-in-out infinite alternate}
+.inv-orb.o2{width:260px;height:260px;background:#2dd4bf;opacity:.14;bottom:-80px;left:-60px;animation:invFloat 11s ease-in-out infinite alternate-reverse}
+@keyframes invFloat{from{transform:translate(0,0) scale(1)}to{transform:translate(-40px,30px) scale(1.18)}}
+.inv-spark{position:absolute;bottom:-10px;width:6px;height:6px;border-radius:50%;background:#ffd9ae;box-shadow:0 0 10px 2px rgba(255,217,174,.6);opacity:0;animation:invRise 8s linear infinite}
+.inv-spark.s1{left:12%}
+.inv-spark.s2{left:28%;animation-delay:2.2s}
+.inv-spark.s3{left:46%;animation-delay:4.1s}
+.inv-spark.s4{left:64%;animation-delay:1.4s}
+.inv-spark.s5{left:80%;animation-delay:5.3s}
+.inv-spark.s6{left:92%;animation-delay:3.2s}
+@keyframes invRise{0%{transform:translateY(0) scale(.6);opacity:0}12%{opacity:.9}85%{opacity:.5}100%{transform:translateY(-75vh) scale(1.1);opacity:0}}
+.invite h2 span{background:linear-gradient(90deg,var(--orange-soft),#ffd9ae,var(--orange-soft));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:invShine 4s linear infinite}
+@keyframes invShine{from{background-position:0% 0}to{background-position:200% 0}}
+.inv-orn{display:flex;align-items:center;justify-content:center;gap:.7rem;margin:1.1rem 0 1.2rem;color:#ffd9ae;font-size:1.1rem}
+.inv-orn i{width:56px;height:2px;border-radius:2px;display:block;background:linear-gradient(90deg,transparent,#ffd9ae)}
+.inv-orn i:last-child{background:linear-gradient(90deg,#ffd9ae,transparent)}
+.invite-btns .btn-orange{animation:none}
+.inv-cta{position:relative}
+.inv-cta::after{content:"";position:absolute;inset:0;border-radius:999px;animation:invRing 2.4s ease-out infinite}
+@keyframes invRing{0%{box-shadow:0 0 0 0 rgba(247,127,0,.55)}100%{box-shadow:0 0 0 22px rgba(247,127,0,0)}}
+.invite-box.visible .invite-arabic{animation:invDown .8s ease both}
+.invite-box.visible h2{animation:invUp .8s ease .15s both}
+.invite-box.visible .inv-orn{animation:invUp .8s ease .3s both}
+.invite-box.visible .invite-quote{animation:invUp .8s ease .4s both}
+.invite-box.visible .invite-btns{animation:invPop .7s cubic-bezier(.34,1.56,.64,1) .55s both}
+@keyframes invDown{from{opacity:0;transform:translateY(-26px)}to{opacity:1;transform:none}}
+@keyframes invUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes invPop{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
+  
   /* WA float */
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:99;display:flex;align-items:center;gap:.6rem;background:#25d366;color:#fff;text-decoration:none;font-weight:700;padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 12px 28px rgba(0,0,0,.25);transition:.25s;animation:waBob 3s ease-in-out infinite}
 @keyframes waBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
@@ -932,17 +966,16 @@ form input:focus,form select:focus{outline:2px solid var(--teal);border-color:va
 </section>
 
 <section class="invite">
+  <i class="inv-spark s1"></i><i class="inv-spark s2"></i><i class="inv-spark s3"></i><i class="inv-spark s4"></i><i class="inv-spark s5"></i><i class="inv-spark s6"></i>
+  <div class="inv-orb o1"></div><div class="inv-orb o2"></div>
   <div class="container">
     <div class="invite-box reveal">
       <div class="invite-arabic">أَهْلًا وَسَهْلًا</div>
       <h2>Siap Menjadi Bagian dari <span>Keluarga Besar DQH Al-Huda?</span></h2>
-      <p class="invite-quote">
-        Mari titipkan putra-putri terbaik Abah wa Ummah untuk tumbuh sebagai generasi Qurrota A'yun —
-        bermodalkan Al-Qur'an, berakhlak pada sunnah, dan siap menjadi da'i umat.
-        <i>— Pengurus DQH Al-Huda Sukoharjo</i>
-      </p>
+      <div class="inv-orn"><i></i>۞<i></i></div>
+      <p class="invite-quote">Mari titipkan putra-putri terbaik Abah wa Ummah untuk tumbuh sebagai generasi Qurrota A'yun — bermodalkan Al-Qur'an, berakhlak pada sunnah, dan siap menjadi da'i umat.<i>— Pengurus DQH Al-Huda Sukoharjo</i></p>
       <div class="invite-btns">
-        <a class="btn btn-orange" href="https://wa.me/6288215602211?text=Assalamu'alaikum,%20saya%20ingin%20bertanya%20dan%20mendaftar%20ke%20DQH%20Al-Huda" target="_blank" rel="noopener">💬 Chat Admin Sekarang</a>
+        <a class="btn btn-orange inv-cta" href="https://wa.me/6288215602211?text=Assalamu'alaikum,%20saya%20ingin%20bertanya%20dan%20mendaftar%20ke%20DQH%20Al-Huda" target="_blank" rel="noopener">💬 Chat Admin Sekarang</a>
         <a class="btn btn-ghost" href="#ppdb">Lihat Info PPDB →</a>
       </div>
     </div>
