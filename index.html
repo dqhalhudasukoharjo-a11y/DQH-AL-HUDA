@@ -319,6 +319,39 @@ footer li{margin-bottom:.5rem;font-size:.9rem}
 .k-item:nth-child(4) .k-ico-teal{background:linear-gradient(135deg,#ff9d33,#f77f00);box-shadow:0 6px 16px rgba(247,127,0,.35)}
 .k-item:nth-child(1) .k-ico-teal{background:linear-gradient(135deg,#17a2ac,#084c54);box-shadow:0 6px 16px rgba(8,76,84,.35)}
   
+ /* Tabel investasi — edisi responsif & hidup */
+.table-wrap{border-radius:20px;box-shadow:0 16px 40px rgba(8,76,84,.12);border:1px solid var(--line)}
+thead th{background:linear-gradient(90deg,var(--teal-deep),var(--teal-dark));padding:1rem 1.2rem;font-size:.85rem;letter-spacing:1.2px;text-transform:uppercase}
+tbody td{padding:1rem 1.2rem}
+tbody td:first-child{font-weight:700;color:var(--teal-deep)}
+tbody td:nth-child(2){font-weight:700;color:var(--ink)}
+tbody tr{transition:background .25s}
+tbody tr:hover{background:rgba(20,145,155,.08)}
+tbody tr:hover td:first-child{box-shadow:inset 4px 0 0 var(--orange)}
+.table-wrap.visible tbody tr{animation:rowIn .55s ease backwards}
+.table-wrap.visible tbody tr:nth-child(1){animation-delay:.05s}
+.table-wrap.visible tbody tr:nth-child(2){animation-delay:.12s}
+.table-wrap.visible tbody tr:nth-child(3){animation-delay:.19s}
+.table-wrap.visible tbody tr:nth-child(4){animation-delay:.26s}
+.table-wrap.visible tbody tr:nth-child(5){animation-delay:.33s}
+.table-wrap.visible tbody tr:nth-child(6){animation-delay:.40s}
+.table-wrap.visible tbody tr:nth-child(7){animation-delay:.47s}
+.table-wrap.visible tbody tr:nth-child(8){animation-delay:.54s}
+@keyframes rowIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media(max-width:640px){
+  table{min-width:0}
+  .table-wrap{overflow:visible;border:0;box-shadow:none;background:transparent;border-radius:0}
+  thead{display:none}
+  tbody tr{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);margin-bottom:.9rem;padding:.9rem 1.1rem .7rem}
+  tbody tr:nth-child(even){background:#fff}
+  tbody td{display:block;border:0;padding:.25rem 0}
+  tbody td:first-child{font-size:1rem;font-weight:800;color:var(--teal-dark);padding-bottom:.4rem;border-bottom:1px dashed var(--line);margin-bottom:.4rem;box-shadow:none}
+  tbody td:nth-child(2){font-weight:700;color:var(--ink)}
+  tbody td:nth-child(2)::before{content:"Nominal · ";color:var(--muted);font-weight:600;font-size:.78rem}
+  tbody td:nth-child(3){color:var(--muted);font-size:.82rem}
+  tbody td:nth-child(3)::before{content:"Keterangan · ";color:var(--muted);font-weight:600;font-size:.78rem}
+}
+  
   /* WA float */
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:99;display:flex;align-items:center;gap:.6rem;background:#25d366;color:#fff;text-decoration:none;font-weight:700;padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 12px 28px rgba(0,0,0,.25);transition:.25s;animation:waBob 3s ease-in-out infinite}
 @keyframes waBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
